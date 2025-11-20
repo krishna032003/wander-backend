@@ -1,0 +1,8 @@
+flask
+flask-cors
+python-dotenv
+requests
+pypdf
+pydub
+SpeechRecognition
+gTTS
