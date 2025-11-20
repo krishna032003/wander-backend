@@ -10,8 +10,6 @@ from flask_cors import CORS
 from pypdf import PdfReader
 import requests
 
-CORS(app, resources={r"/*": {"origins": "*"}})
-
 
 # Basic text splitting (no langchain dependency)
 def split_text(text, chunk_size=1000, chunk_overlap=200):
@@ -48,7 +46,8 @@ if not GOOGLE_PLACES_API_KEY:
 
 # Initialize Flask App
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "*"}})
+CORS(app, resources={r"/*": {"origins": "*"}})
+
 
 # Global state
 current_location = None
